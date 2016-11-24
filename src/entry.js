@@ -1,1 +1,1 @@
- document.write(require("./content.js"));
+import pitkisTrending from './pitkisTrendingGraph/pitkisTrending.js';

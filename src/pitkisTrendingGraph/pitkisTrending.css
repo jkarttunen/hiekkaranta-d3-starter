@@ -1,0 +1,16 @@
+#app {
+    background-color: #EEE;
+    margin: 2rem auto 0 auto;
+    display: block;
+}
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}

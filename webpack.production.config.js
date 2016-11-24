@@ -1,5 +1,7 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackValidator = require('webpack-validator');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 const {resolve} = require('path');
 
 const config = {
@@ -11,10 +13,19 @@ const config = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" }
+            { test: /\.css$/, loader: "style!css" },
+            { test: /\.js$/, loader: 'babel-loader', query: {cacheDirectory: true, compact:false}, exclude:'/node_modules/'}
         ]
     },
-    plugins: [new HtmlWebpackPlugin()]
+    devtool: ('source-map'),
+    plugins: [
+        new CleanWebpackPlugin(['public']),
+        new HtmlWebpackPlugin({
+            title: 'My App',
+            filename: 'index.html',
+            template: 'index.html'
+        })
+    ]
 };
 
 module.exports = () => {
