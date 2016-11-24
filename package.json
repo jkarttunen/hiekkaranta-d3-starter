@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": " webpack ./src/entry.js ./src/bundle.js",
+    "postinstall": "npm run build",
+    "build": "webpack -p --config webpack.production.config.js",
+    "start": "webpack-dev-server --config webpack.dev.config.js",
+    "serve": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.14.0"
+  },
   "devDependencies": {
     "css-loader": "^0.26.0",
+    "html-webpack-plugin": "^2.24.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.1.0-beta.27"
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.11",
+    "webpack-validator": "^2.2.9"
   }
 }
