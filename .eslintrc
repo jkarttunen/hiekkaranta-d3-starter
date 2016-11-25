@@ -3,18 +3,8 @@
     "eslint:recommended",
     "airbnb-base"
   ],
-  "globals": {
-    "$": true,
-    "_": true,
-    "Bacon": true,
-    "moment": true,
-    "expect": true,
-    "$expect": true
-  },
   "env": {
     "browser": true,
-    "node": true,
-    "mocha": true
   },
   "parserOptions": {
       "ecmaVersion": 6,
@@ -42,7 +32,7 @@
         "templateStrings": true,
         "unicodePointEscapes": true,
         "globalReturn": false,
-        "jsx": true
+        "jsx": false
       }
   },
   "rules": {
