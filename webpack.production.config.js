@@ -13,7 +13,7 @@ const config = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.js$/, loader: 'babel-loader', query: {cacheDirectory: true, compact:false}, exclude:'/node_modules/'}
         ]
     },
