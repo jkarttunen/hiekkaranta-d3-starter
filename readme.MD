@@ -2,13 +2,13 @@
 
 # Requirements
 * git
-* node & npm
-* heroku tool for deployment
+* Node & npm
+* [Heroku toolbelt](http://toolbelt.herokuapp.com) and Heroku account for deployment
 
 ## To install
-`git clone git@github.com:jkarttunen/hiekkaranta-d3-starter.git`
-`cd hiekkaranta-d3-starter`
-`npm install`
+* `git clone git@github.com:jkarttunen/hiekkaranta-d3-starter.git`
+* `cd hiekkaranta-d3-starter`
+* `npm install`
 
 ## To start development environment
 `npm run start`
