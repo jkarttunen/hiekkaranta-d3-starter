@@ -6,8 +6,6 @@ import createGraph from './simpleGraph.js'
 
 // based on https://bl.ocks.org/mbostock/3885304
 
-const url = 'https://cproxy.veikkaus.fi/trending';
-
 // initialization code. prepares Dom and scales
 const svg = d3.select("#app"),
     margin = {top: 30, right: 30, bottom: 40, left: 80},
@@ -24,9 +22,10 @@ const draw = createGraph(container)
     .width(elementWidth)
     .height(elementHeight);
 
+
+const url = 'https://cproxy.veikkaus.fi/trending';
 d3.json(url)
     .get((error, data)=> {
         if (error) throw error;
         draw(data);
     });
-

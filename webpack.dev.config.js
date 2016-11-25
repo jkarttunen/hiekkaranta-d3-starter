@@ -22,7 +22,7 @@ const config = {
     },
     devServer: {
         hot: false,
-        inline: true,
+        inline: false,
         stats: 'errors-only',
         port: 9000,
         open: true,
