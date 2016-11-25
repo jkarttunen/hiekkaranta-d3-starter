@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackDevServer = require("webpack-dev-server");
-const webpackValidator = require('webpack-validator');
+//const webpackValidator = require('webpack-validator');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const {resolve} = require('path');
@@ -16,7 +16,8 @@ const config = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: 'style!css' },
+            { test: /\.js$/, enforce: 'pre', loader: 'eslint-loader', exclude: /node_modules/},
             { test: /\.js$/, loader: 'babel-loader', query: {cacheDirectory: true, compact:false}}
         ]
     },
@@ -44,4 +45,4 @@ const config = {
     ]
 };
 
-module.exports = webpackValidator(config)
+module.exports = config;
