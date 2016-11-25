@@ -6,8 +6,8 @@
 * heroku tool for deployment
 
 ## To install
-`git clone xxx`
-`cd xxx`
+`git clone git@github.com:jkarttunen/hiekkaranta-d3-starter.git`
+`cd hiekkaranta-d3-starter`
 `npm install`
 
 ## To start development environment
